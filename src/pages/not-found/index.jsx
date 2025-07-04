@@ -1,8 +1,9 @@
+import { Navigation } from "../../componets/navigation";
+
 export const NotFound = () => {
 
     return <>
-        <a href="/">Home</a>
-        <a href="/pokemon">Pokemon</a>
+        <Navigation /> 
         <div>Page not found</div>
     </>
 };
