@@ -21,8 +21,9 @@ const Pokemons = () => {
   return (
     <div>
       <Navigation />
-      <h1>Pokemons</h1>
-      <p>List of Pokemons will be displayed here.</p>
+      <div className="flex flex-col mt-15">
+        <h1>List of Pokemons:</h1>
+      </div>
     </div>
   );
 }
