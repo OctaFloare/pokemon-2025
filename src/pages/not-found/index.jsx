@@ -4,6 +4,6 @@ export const NotFound = () => {
 
     return <>
         <Navigation /> 
-        <div>Page not found</div>
+        <h1>Page not found</h1>
     </>
 };

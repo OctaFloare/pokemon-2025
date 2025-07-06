@@ -4,19 +4,9 @@ import { useEffect } from "react";
 import axios from "axios";
 
 export const Home = () => {
-    const [data, setData] = useState({});
-
-    useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon/').then((response) =>{
-            setData(response)
-        }).catch(error => {
-            console.error(error);
-        });
-    },[])
-
-    console.log(data, "this is pokemons")
 
     return <div>
-        <div>Home Page</div>
+        <Navigation/>
+        <h1>Welcome on our web-site.</h1>
     </div>
 }
