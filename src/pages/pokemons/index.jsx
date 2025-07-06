@@ -7,9 +7,9 @@ const Pokemons = () => {
   const [pokemonsList, setData] = useState({});
 
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/?limit=10')
+    axios.get('https://pokeapi.co/api/v2/pokemon/?limit=1302')
       .then((response) => {
-        setData(response);
+        setData(response.data);
       })
       .catch(error => {
         console.error(error);
