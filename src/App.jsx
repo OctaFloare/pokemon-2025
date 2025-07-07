@@ -1,20 +1,18 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './pages/home'
 import { NotFound } from './pages/not-found'
-import { Pokemon } from './pages/pokemon'
-import { Pokemons } from './pages/pokemons'
+import { PokemonPage } from './pages/pokemon'
 import { PokemonsRoute } from './pages/PokemonsRoute'
+import { AppRoutes } from './Routes'
+import { PokemonContext, usePokemonValue } from './contexts/pokemonContext'
 
 function App() {
+  const value = usePokemonValue();
 
-  return <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='*' element={<NotFound />} />
-    {/* <Route path="/pokemon/:id" element={<Pokemon />} /> */}
-    <Route path='/pokemons' element={<PokemonsRoute />} />
-
-  </Routes> 
+  return <PokemonContext.Provider value={value}>
+    <AppRoutes />
+  </PokemonContext.Provider> 
 }
 
 export default App

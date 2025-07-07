@@ -10,7 +10,7 @@ export const defaultPerPage = 10;
 
 export const Pokemons = () => {
     const [data, setData] = useState({});
-    const [totalNumberOfPokemons, setTotalNumberOfPokemons] = useState(1302);
+    console.log(data, "this is data")
 
     const [searchParams] = useSearchParams();
     const currentPage = parseInt(searchParams.get("page")) || 1;
@@ -30,13 +30,11 @@ export const Pokemons = () => {
         
         fetch();
     }, [currentPage, perPage]);
-    // console.log(data)
-    // console.log(data.results)
 
     return <div>
         <Navigation />
         <h1 className="mt-10">Pokemons Page</h1>
-        <Pagination />
-        <PokemonList pokemonList = {data.results}/>
+        {data.results && <PokemonList pokemonList={data.results}/>}
+        {!data.results && <div>Loading</div>}
     </div>
 }

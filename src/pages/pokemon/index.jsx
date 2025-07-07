@@ -1,11 +1,9 @@
-import { useParams } from "react-router-dom"
 import { Navigation } from "../../componets/navigation";
+import { Pokemon } from "../../componets/pokemon";
 
-export const Pokemon = () => {
-    const { id } = useParams();
-
+export const PokemonPage = () => {
     return <>
-        <Navigation /> 
-        <div>Pokemon nr {id}</div>   
+        <Navigation />
+        <Pokemon />
     </>
 }
