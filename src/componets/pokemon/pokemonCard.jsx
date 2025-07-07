@@ -1,3 +1,5 @@
+import { Moves } from "../moves";
+
 export const PokemonCard = ({ pokemon }) => {
     const { name, weight, sprites, types } = pokemon;
 
@@ -7,6 +9,7 @@ export const PokemonCard = ({ pokemon }) => {
             <div>Name: {name.charAt(0).toUpperCase() + name.slice(1)}</div>
             <div>Weight: {weight}</div>
             <div>Type: {types[0].type.name}</div>
+            <Moves moves={pokemon.moves} nr={3}/>
         </div>
     </div>
 }
