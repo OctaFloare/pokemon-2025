@@ -12,7 +12,7 @@ export const PokemonListCard = ({ pokemon }) => {
 
     return (
         <>
-            <Link to={`/pokemon/${id}`} onClick={onClick}>{pokemon.name}</Link>
+            <Link to={`/pokemon/${id}`}>{pokemon.name}</Link>
         </>
     )
 }

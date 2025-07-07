@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { usePokemonContext } from "../../contexts/pokemonContext";
 import { PokemonCard } from "./pokemonCard";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export const Pokemon = () => {
-    const { pokemonUrl } = usePokemonContext();
+    const { id } = useParams();
     const [pokemon, setPokemon] = useState();
 
+
     useEffect(() => {
+        const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${id}`;
         axios.get(pokemonUrl).then(response => {
             setPokemon(response.data)
         }) 
-    }, [pokemonUrl])
+    }, [id])
 
     return <>
         {pokemon && <PokemonCard pokemon={pokemon}/>}
