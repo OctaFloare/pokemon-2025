@@ -33,7 +33,7 @@ export const Pokemons = () => {
 
     return <div>
         <Navigation />
-        <h1 className="mt-10">Pokemons Page</h1>
+        <h1 className="text-black bg-gradient-to-r from-blue-300 via-pink-500 to-amber-500">Pokemons Page</h1>
         {data.results && <PokemonList pokemonList={data.results}/>}
         {!data.results && <div>Loading</div>}
     </div>

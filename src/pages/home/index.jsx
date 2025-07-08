@@ -4,6 +4,6 @@ export const Home = () => {
 
     return <div>
         <Navigation/>
-        <h1>Welcome on our web-site.</h1>
+        <h1 className="text-black bg-gradient-to-r from-blue-300 via-pink-500 to-amber-500">Welcome on our website.</h1>
     </div>
 }
