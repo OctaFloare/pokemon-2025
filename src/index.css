@@ -26,14 +26,36 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex; */
-  place-items: top;
+  display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("assets/backG.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Comic Sans MS", sans-serif;
+  color: #facc15;
+  text-shadow: black 0 0 3px;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#root, .app {
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 4rem;
   line-height: 1.1;
 }
 
@@ -54,17 +76,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

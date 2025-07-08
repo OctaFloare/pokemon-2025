@@ -11,8 +11,10 @@ export const PokemonListCard = ({ pokemon }) => {
     }
 
     return (
-        <>
-            <Link to={`/pokemon/${id}`} onClick={onClick}>{pokemon.name}</Link>
-        </>
+        <div className="bg-[#2d6db6] rounded-md text-2xl p-1 border-2 border-yellow-400 shadow-[0_0_5px_#000000]">
+            <Link to={`/pokemon/${id}`} onClick={onClick} className="!text-yellow-400 hover:!text-yellow-300">
+                {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+            </Link>
+        </div>
     )
 }
