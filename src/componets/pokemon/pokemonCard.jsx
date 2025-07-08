@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { PokemonAbilites } from "./pokemonAbilities";
+=======
+import { PokemonStats } from "./pokemonStats";
+export const PokemonCard = ({ pokemon }) => {
+      console.log("Pokemon data in PokemonCard:", pokemon);
+    const { name, weight, sprites, types } = pokemon;
+>>>>>>> 4b98125 (Commit)
 
 import { Moves } from "./pokemonMoves";
 
@@ -11,9 +18,13 @@ export const PokemonCard = ({ pokemon }) => {
             <div>Name: {name.charAt(0).toUpperCase() + name.slice(1)}</div>
             <div>Weight: {weight}</div>
             <div>Type: {types[0].type.name}</div>
+<<<<<<< HEAD
             <PokemonAbilites abilities={abilities} />
             <Moves moves={pokemon.moves} nr={3}/>
             <div>Form: {forms[0].name}</div>
+=======
+            <PokemonStats pokemon={pokemon} />
+>>>>>>> 4b98125 (Commit)
         </div>
     </div>
 }
