@@ -1,6 +1,7 @@
 import { Navigation } from "../../componets/navigation"
 
 export const Home = () => {
+<<<<<<< HEAD
 
     return <>
         <Navigation />
