@@ -1,4 +1,6 @@
+import { PokemonStats } from "./pokemonStats";
 export const PokemonCard = ({ pokemon }) => {
+      console.log("Pokemon data in PokemonCard:", pokemon);
     const { name, weight, sprites, types } = pokemon;
 
     return <div className="flex gap-2 justify-center">
@@ -7,6 +9,7 @@ export const PokemonCard = ({ pokemon }) => {
             <div>Name: {name}</div>
             <div>Weight: {weight}</div>
             <div>Type: {types[0].type.name}</div>
+            <PokemonStats pokemon={pokemon} />
         </div>
     </div>
 }
