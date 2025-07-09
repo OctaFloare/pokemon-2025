@@ -1,6 +1,6 @@
 import { PokemonAbilites } from "./pokemonAbilities";
 
-import { Moves } from "../moves";
+import { Moves } from "./pokemonMoves";
 
 export const PokemonCard = ({ pokemon }) => {
     const { name, weight, sprites, types, abilities } = pokemon;
