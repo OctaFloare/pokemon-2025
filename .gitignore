@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -33,3 +34,6 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+=======
+node_modules/
+>>>>>>> 37e9d8d (Remove node_modules and add .gitignore)

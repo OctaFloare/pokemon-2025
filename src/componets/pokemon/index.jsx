@@ -15,8 +15,10 @@ export const Pokemon = () => {
         }) 
     }, [id])
 
-    return <>
+    return (
+      <div className="inline-flex flex-col bg-[#2d6db6] border-3 border-yellow-400 shadow-[0_0_5px_#000000] self-center p-5 rounded-md text-yellow-400 mt-18 mb-18">
         {pokemon && <PokemonCard pokemon={pokemon}/>}
         {!pokemon && <div>Pokemon loading...</div>}
-    </>
+      </div>
+    )
 }

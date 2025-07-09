@@ -20,21 +20,23 @@ export const Pokemons = () => {
         const offset = (currentPage - 1) * perPage;
         async function fetch() {
             try {
-                let response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${perPage}`); 
+                let response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${perPage}`);
                 setData(response?.data);
             }
             catch (error) {
                 console.log(error);
             }
         }
-        
+
         fetch();
     }, [currentPage, perPage]);
 
     return <div>
         <Navigation />
-        <h1 className="mt-10">Pokemons Page</h1>
-        {data.results && <PokemonList pokemonList={data.results}/>}
+        <div className="flex flex-col mt-15">
+            <h1>List of Pokemons:</h1>
+        </div>
+        {data.results && <PokemonList pokemonList={data.results} />}
         {!data.results && <div>Loading</div>}
     </div>
 }
