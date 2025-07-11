@@ -8,6 +8,7 @@ export const PokemonListCard = ({ pokemon }) => {
 
     const onClick = () => {
         setPokemonUrl(pokemon.url)
+
     }
 
     return (

@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import { PokemonCard } from "./pokemonCard";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { usePokemonContext } from "../../contexts/pokemonContext";
 
 export const Pokemon = () => {
     const { id } = useParams();
     const [pokemon, setPokemon] = useState();
+    const { setPokemonSpeciesUrl } = usePokemonContext();
 
 
     useEffect(() => {
         const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${id}`;
         axios.get(pokemonUrl).then(response => {
             setPokemon(response.data)
+            setPokemonSpeciesUrl(response.data.species.url)
         }) 
     }, [id])
 
