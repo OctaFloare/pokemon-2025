@@ -15,7 +15,7 @@ export const PokemonCard = ({ pokemon }) => {
             <PokemonAbilites abilities={abilities} />
             <Moves moves={pokemon.moves} nr={3}/>
             <div>Form: {forms[0].name}</div>
-            <SpeciesCard></SpeciesCard>
+            <SpeciesCard/>
         </div>
     </div>
 }
