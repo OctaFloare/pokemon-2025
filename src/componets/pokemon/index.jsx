@@ -10,6 +10,7 @@ export const Pokemon = () => {
     useEffect(() => {
         axios.get(pokemonUrl).then(response => {
             setPokemon(response.data)
+            console.log(response.data)
         }) 
     }, [pokemonUrl])
 
