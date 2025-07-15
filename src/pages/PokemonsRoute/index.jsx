@@ -7,11 +7,6 @@ export const PokemonsRoute = () => {
     const page = searchParams?.get("page");
     const perPage = searchParams?.get("perPage");
 
-    // console.log(typeof(parseInt(page)));
-    // console.log(page);
-    // console.log(perPage);
-
-    
     if (!page || !perPage) {
         const _page = page || defaultPage;
         const _perPage = perPage || defaultPerPage;
