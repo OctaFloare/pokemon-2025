@@ -4,7 +4,7 @@ import { PokemonStats } from "./pokemonStats";
 
 
 export const PokemonCard = ({ pokemon }) => {
-    const { name, weight, sprites, types, forms, game_indices, abilities } = pokemon;
+    const { name, weight, sprites, types, forms, abilities } = pokemon;
     return <div className="flex flex-col gap-2 justify-center ">
         <img src={sprites.front_default} alt={name} className="w-[300px] h-[300px] flex self-center"/>
         <div className="flex flex-col justify-center text-2xl">
