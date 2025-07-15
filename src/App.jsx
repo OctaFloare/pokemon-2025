@@ -5,6 +5,7 @@ import { PokemonPage } from './pages/pokemon'
 import { PokemonsRoute } from './pages/PokemonsRoute'
 import { AppRoutes } from './Routes'
 import { PokemonContext, usePokemonValue } from './contexts/pokemonContext'
+import { PokemonCards } from './componets/PokemonCards' 
 
 function App() {
   const value = usePokemonValue();
