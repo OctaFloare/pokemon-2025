@@ -1,3 +1,4 @@
+import { SpeciesCard } from "../species";
 import { PokemonAbilites } from "./pokemonAbilities";
 import { Moves } from "./pokemonMoves";
 import { PokemonStats } from "./pokemonStats";
@@ -23,7 +24,8 @@ export const PokemonCard = ({ pokemon }) => {
                     </span>
                 ))}
             </div>
-
+     <div>Form: {forms[0].name}</div>
+            <SpeciesCard/>
         </div>
     </div>
 }
